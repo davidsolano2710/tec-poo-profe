@@ -78,4 +78,7 @@ git fetch <nombre-del-remoto>
 ```
 git clone <url-del-repo>
 ```
-
+## Crear un Tag
+```
+git tag -a v1.0.0 -m "Mi primer tag. Version 1.0.0"
+``
