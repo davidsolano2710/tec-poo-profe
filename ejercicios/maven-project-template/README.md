@@ -19,6 +19,7 @@ mvn archetype:generate -DgroupId=tec.poo \
 1. Actualizar el `<groupId>` de ser necesario.
 1. Actualizar el `<artifactId>` de ser necesario.
 1. Actualizar la `<version>` de ser necesario.
+1. Actualizar el `<name>` de ser necesario.
 1. Actualizar el elemento `<MainClass>` de los _plugins_ `maven-assembly-plugin` y `maven-assembly-plugin` al `fully qualified name` de la clase principal.
 
 ## Crear un proyecto Maven utilizando esta plantilla
@@ -30,6 +31,7 @@ de archivos.
 1. Actualizar el `<groupId>` de ser necesario.
 1. Actualizar el `<artifactId>` de ser necesario.
 1. Actualizar la `<version>` de ser necesario.
+1. Actualizar el `<name>` de ser necesario.
 1. Actualizar el elemento `<MainClass>` de los _plugins_ `maven-assembly-plugin` y `maven-assembly-plugin` al `fully qualified name` de la clase principal.
 
 ## Gestión del ciclo de vida de la aplicación
