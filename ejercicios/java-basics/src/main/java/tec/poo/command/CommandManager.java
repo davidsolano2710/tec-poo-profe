@@ -1,6 +1,6 @@
 package tec.poo.command;
 
-import tec.poo.command.my.*;
+import tec.poo.command.*;
 
 import java.util.HashMap;
 import java.util.Map;
