@@ -1,7 +1,7 @@
 package tec.poo.command;
 
 import tec.poo.command.*;
-import tec.poo.command.my.SwitchCaseCommand;
+import tec.poo.command.SwitchCaseCommand;
 
 import java.util.HashMap;
 import java.util.Map;
