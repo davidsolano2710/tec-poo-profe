@@ -11,6 +11,7 @@ public class CommandManager {
     private Map<String, Object> availableCommands;
 
     private InfoCommand infoCommand;
+    private ScannerCommand scannerCommand;
 
     public CommandManager(String[] args) {
 
@@ -21,8 +22,10 @@ public class CommandManager {
         // Inicializando las variables de instancia
         this.availableCommands = new HashMap<>();
         this.infoCommand = new InfoCommand(args);
+        this.scannerCommand = new ScannerCommand(args);
 
         this.addCommand("info", infoCommand);
+        this.addCommand("scanner", scannerCommand);
     }
 
     public void addCommand(String commandOption, Object command) {
@@ -64,6 +67,8 @@ public class CommandManager {
 
         if (commandOption.equals("info")) {
             this.infoCommand.execute();
+        } else if(commandOption.equals("scanner")){
+            this.scannerCommand.execute();
         } else {
             printAvailableCommands();
         }
