@@ -29,18 +29,14 @@ public class CommandManager {
         // Inicializando las variables de instancia
         this.availableCommands = new HashMap<>();
         this.infoCommand = new InfoCommand(args);
-
         this.switchCaseCommand = new SwitchCaseCommand(args);
-
-        this.addCommand("info", infoCommand);
-        this.addCommand("switch",switchCaseCommand);
-
         this.scannerCommand = new ScannerCommand(args);
         this.collectionsCommand = new CollectionsCommand(args);
 
         this.addCommand("info", infoCommand);
         this.addCommand("scanner", scannerCommand);
         this.addCommand("coll", collectionsCommand);
+        this.addCommand("switch",switchCaseCommand);
 
     }
 
@@ -83,15 +79,12 @@ public class CommandManager {
         }
         if (commandOption.equals("info")) {
             this.infoCommand.execute();
-
         } else if (commandOption.equals("switch")) {
             this.switchCaseCommand.execute();
-
         } else if(commandOption.equals("scanner")){
             this.scannerCommand.execute();
         } else if(commandOption.equals("coll")){
             this.collectionsCommand.execute();
-
         } else {
             printAvailableCommands();
         }
