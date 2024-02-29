@@ -1,4 +1,4 @@
-package tec.poo.command.my;
+package tec.poo.command;
 
 import java.util.*;
 

@@ -1,7 +1,6 @@
 package tec.poo.command;
 
 import tec.poo.command.*;
-import tec.poo.command.my.CollectionsCommand;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +11,7 @@ public class CommandManager {
     private Map<String, Object> availableCommands;
 
     private InfoCommand infoCommand;
+    private ScannerCommand scannerCommand;
 
     CollectionsCommand collectionsCommand;
 
@@ -24,9 +24,11 @@ public class CommandManager {
         // Inicializando las variables de instancia
         this.availableCommands = new HashMap<>();
         this.infoCommand = new InfoCommand(args);
+        this.scannerCommand = new ScannerCommand(args);
         this.collectionsCommand = new CollectionsCommand(args);
 
         this.addCommand("info", infoCommand);
+        this.addCommand("scanner", scannerCommand);
         this.addCommand("coll", collectionsCommand);
     }
 
@@ -66,10 +68,10 @@ public class CommandManager {
         if (commandOption.isBlank()) {
             this.printAvailableCommands();
         }
-
         if (commandOption.equals("info")) {
             this.infoCommand.execute();
-
+        } else if(commandOption.equals("scanner")){
+            this.scannerCommand.execute();
         } else if(commandOption.equals("coll")){
             this.collectionsCommand.execute();
         } else {
