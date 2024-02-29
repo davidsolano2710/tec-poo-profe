@@ -1,6 +1,7 @@
 package tec.poo.command;
 
 import tec.poo.command.*;
+import tec.poo.command.my.SwitchCaseCommand;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,6 +12,7 @@ public class CommandManager {
     private Map<String, Object> availableCommands;
 
     private InfoCommand infoCommand;
+    private SwitchCaseCommand switchCaseCommand;
 
     public CommandManager(String[] args) {
 
@@ -21,8 +23,10 @@ public class CommandManager {
         // Inicializando las variables de instancia
         this.availableCommands = new HashMap<>();
         this.infoCommand = new InfoCommand(args);
+        this.switchCaseCommand = new SwitchCaseCommand(args);
 
         this.addCommand("info", infoCommand);
+        this.addCommand("switch",switchCaseCommand);
     }
 
     public void addCommand(String commandOption, Object command) {
@@ -60,10 +64,13 @@ public class CommandManager {
     public void executeCommand(String commandOption) {
         if (commandOption.isBlank()) {
             this.printAvailableCommands();
+            
         }
 
         if (commandOption.equals("info")) {
             this.infoCommand.execute();
+        } else if (commandOption.equals("switch")) {
+            this.switchCaseCommand.execute();
         } else {
             printAvailableCommands();
         }
