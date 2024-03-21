@@ -1,8 +1,14 @@
 package tec.poo.ejercicios;
 
 public class GestorUsuarios {
-    public void obtenerUsuarios(){
 
+    private ConexionBD connection ;
+
+    public GestorUsuarios(ConexionBD conexionBD){
+        this.connection = conexionBD;
+    }
+    public void obtenerUsuarios(){
+        connection.ejecutarConsulta(null);
     }
 
 

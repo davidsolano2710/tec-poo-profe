@@ -1,15 +1,14 @@
 package tec.poo.ejercicios;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
-
-
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        ApplicationContext applicationContext = new ApplicationContext();
+
+        var gestorUsuarios = applicationContext.getUserManager();
+        gestorUsuarios.obtenerUsuarios();
+
+        
     }
 }
